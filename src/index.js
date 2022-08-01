@@ -4,12 +4,14 @@ import "./index.css";
 import Login from "./Login.js";
 // import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+// import Manufacturer from "./Manufacturer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
     <Login />
+    {/* <Manufacturer /> */}
   </React.StrictMode>
 );
 

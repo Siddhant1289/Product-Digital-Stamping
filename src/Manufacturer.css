@@ -1,0 +1,39 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: rgb(187, 187, 245);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left,
+.right {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-top {
+  height: 50%;
+  width: 50%;
+  float: left;
+  background-color: rgb(132, 41, 41);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-down {
+  height: 50%;
+  width: 50%;
+  float: left;
+  background-color: rgb(13, 12, 12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right {
+  background-color: rgb(88, 88, 120);
+}
