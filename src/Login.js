@@ -1,13 +1,6 @@
 import React, { Component } from "react";
 import "./Login.css";
 class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { card: "" };
-  }
-  openLogin = () => {};
-
-  openRegister = () => {};
   render() {
     return (
       <div className="container">
@@ -35,13 +28,7 @@ class Login extends Component {
                   <input type="checkbox" />
                   <span>Remember Me</span>
                 </form>
-                <button
-                  type="button"
-                  className="btn"
-                  onClick={this.openRegister}
-                >
-                  I'm New Here
-                </button>
+
                 <a href="">Forgot Password?</a>
               </div>
             </div>
@@ -77,10 +64,6 @@ class Login extends Component {
                   <input type="checkbox" />
                   <span>Remember Me</span>
                 </form>
-                <button type="button" className="btn" onClick={this.openLogin}>
-                  I Have An Account
-                </button>
-                <a href="">Forgot Password?</a>
               </div>
             </div>
           </div>

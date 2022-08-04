@@ -45,9 +45,6 @@
   box-sizing: border-box;
   backface-visibility: hidden;
 }
-/* .card-back {
-  transform: rotateY(180deg);
-} */
 .card h2 {
   font-weight: normal;
   font-size: 24px;

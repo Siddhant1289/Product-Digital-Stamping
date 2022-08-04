@@ -1,17 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Login from "./Login.js";
+// import Login from "./Login.js";
 // import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import Shopkeeper from "./Shopkeeper";
 // import Manufacturer from "./Manufacturer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Login />
+    {/* <Login /> */}
     {/* <Manufacturer /> */}
+    <Shopkeeper />
   </React.StrictMode>
 );
 
