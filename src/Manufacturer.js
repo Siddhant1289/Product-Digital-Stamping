@@ -12,9 +12,9 @@ class Manufacturer extends Component {
         <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route path="/add_shopkeeper" Component={<Add_Shopkeeper />} />
-            <Route path="/products" Component={<Products />} />
-            <Route path="/generate_qr" Component={<Generate_QR />} />
+            <Route exact path="/add_shopkeeper" element={<Add_Shopkeeper />} />
+            <Route exact path="/products" element={<Products />} />
+            <Route exact path="/generate_qr" element={<Generate_QR />} />
           </Routes>
         </BrowserRouter>
       </div>

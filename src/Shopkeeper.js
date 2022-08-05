@@ -11,9 +11,12 @@ class Shopkeeper extends Component {
         <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route path="/products_list" Component={<Products_List />} />
-            <Route path="/generate_new_qr" Component={<Generate_New_QR />} />
-            {/* <Route path="/generate_qr" Component={<Generate_QR />} /> */}
+            <Route exact path="/products_list" element={<Products_List />} />
+            <Route
+              exact
+              path="/generate_new_qr"
+              element={<Generate_New_QR />}
+            />
           </Routes>
         </BrowserRouter>
       </div>
