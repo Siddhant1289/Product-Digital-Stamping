@@ -4,8 +4,9 @@ import "./index.css";
 // import Login from "./Login.js";
 // import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import Shopkeeper from "./Shopkeeper";
+// import Shopkeeper from "./Shopkeeper";
 // import Manufacturer from "./Manufacturer";
+import Customer from "./Customer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,7 +14,8 @@ root.render(
     {/* <App /> */}
     {/* <Login /> */}
     {/* <Manufacturer /> */}
-    <Shopkeeper />
+    {/* <Shopkeeper /> */}
+    <Customer />
   </React.StrictMode>
 );
 
