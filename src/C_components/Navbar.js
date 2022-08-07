@@ -10,6 +10,9 @@ export const Navbar = () => {
           <label className="logo">Customer</label>
           <ul>
             <li>
+              <Link to="/product">Product</Link>
+            </li>
+            <li>
               <Link to="/warranty">Warranty</Link>
             </li>
             <li>

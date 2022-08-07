@@ -1,9 +1,11 @@
 import React from "react";
-
+import "./Navbar.css";
 export const Product_Details = () => {
   return (
-    <div>
-      <div>This Is Product Details</div>
+    <div className="main">
+      <div className="card">
+        <div className="inner-box">This Is Product Details</div>
+      </div>
     </div>
   );
 };

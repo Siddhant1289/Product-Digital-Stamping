@@ -1,10 +1,10 @@
 import React from "react";
-import "./Navbar.css";
-export const Products_List = () => {
+
+export const Product = () => {
   return (
     <div className="main">
       <div className="card">
-        <div className="inner-box">This Is Product List</div>
+        <div className="inner-box">This Is Product</div>
       </div>
     </div>
   );
