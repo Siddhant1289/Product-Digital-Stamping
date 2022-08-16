@@ -64,6 +64,19 @@
   text-align: center;
   color: #fff;
 }
+.select-box {
+  width: 100%;
+  background: transparent;
+  border: 2px solid #fff;
+  margin: 6px 0;
+  height: 32px;
+  border-radius: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  outline: none;
+  text-align: center;
+  color: #fff;
+}
 
 ::placeholder {
   color: #fff;
