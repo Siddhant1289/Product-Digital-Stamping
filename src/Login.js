@@ -37,49 +37,47 @@ class Login extends Component {
           <div className="container">
             <div className="left">
               <div className="card">
-                <div className="inner-box" id="card">
-                  <div className="card-front">
-                    <h2>
-                      <u>LOGIN</u>
-                    </h2>
-                    <form onSubmit={this.fun}>
-                      <select className="select-box" placeholder="Select">
-                        <option value="">Select</option>
-                        <option value="Manufacturer">Manufacturer</option>
-                        <option value="Shopkeeper">Shopkeeper</option>
-                      </select>
-                      <input
-                        type="text"
-                        name="ID"
-                        id="ID"
-                        value={this.state.a}
-                        onChange={this.handleChangeFields}
-                        className="input-box"
-                        placeholder="Enter UserID"
-                        required
-                      />
-                      <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        value={this.state.a}
-                        onChange={this.handleChangeFields}
-                        className="input-box"
-                        placeholder="Password"
-                        required
-                      />
+                <div className="card-front">
+                  <h2>
+                    <u>LOGIN</u>
+                  </h2>
+                  <form onSubmit={this.fun}>
+                    <select className="select-box" placeholder="Select">
+                      <option value="">Select</option>
+                      <option value="Manufacturer">Manufacturer</option>
+                      <option value="Shopkeeper">Shopkeeper</option>
+                    </select>
+                    <input
+                      type="text"
+                      name="ID"
+                      id="ID"
+                      value={this.state.a}
+                      onChange={this.handleChangeFields}
+                      className="input-box"
+                      placeholder="Enter UserID"
+                      required
+                    />
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      value={this.state.a}
+                      onChange={this.handleChangeFields}
+                      className="input-box"
+                      placeholder="Password"
+                      required
+                    />
 
-                      <input
-                        className="submit-btn"
-                        type="submit"
-                        value="submit"
-                      />
-                      <input type="checkbox" />
-                      <span>Remember Me</span>
-                    </form>
+                    <input
+                      className="submit-btn"
+                      type="submit"
+                      value="submit"
+                    />
+                    <input type="checkbox" />
+                    <span>Remember Me</span>
+                  </form>
 
-                    {/* <a href="">Forgot Password?</a> */}
-                  </div>
+                  <a href="">Forgot Password?</a>
                 </div>
               </div>
             </div>
