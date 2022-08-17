@@ -7,7 +7,7 @@ import { Products_List } from "./S_components/Products_List";
 class Shopkeeper extends Component {
   render() {
     return (
-      <div className="container">
+      <div>
         <BrowserRouter>
           <Navbar />
           <Routes>

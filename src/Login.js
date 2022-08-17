@@ -29,7 +29,7 @@ class Login extends Component {
     return (
       <div>
         {this.state.isLog ? (
-          <div>
+          <div className="container">
             {/* <Manufacturer /> */}
             <Shopkeeper />
           </div>
@@ -69,10 +69,11 @@ class Login extends Component {
                         required
                       />
 
-                      {/* <button type="submit" className="submit-btn">
-                        Submit
-                      </button> */}
-                      <input type="submit" value="submit" />
+                      <input
+                        className="submit-btn"
+                        type="submit"
+                        value="submit"
+                      />
                       <input type="checkbox" />
                       <span>Remember Me</span>
                     </form>

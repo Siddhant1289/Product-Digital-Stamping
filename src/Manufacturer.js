@@ -8,7 +8,7 @@ import { Generate_QR } from "./M_components/Generate_QR";
 class Manufacturer extends Component {
   render() {
     return (
-      <div className="container">
+      <div>
         <BrowserRouter>
           <Navbar />
           <Routes>
