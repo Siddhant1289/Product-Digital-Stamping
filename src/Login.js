@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Login.css";
-// import Manufacturer from "./Manufacturer";
-import Shopkeeper from "./Shopkeeper";
+import Manufacturer from "./Manufacturer";
+// import Shopkeeper from "./Shopkeeper";
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -30,8 +30,8 @@ class Login extends Component {
       <div>
         {this.state.isLog ? (
           <div className="container">
-            {/* <Manufacturer /> */}
-            <Shopkeeper />
+            <Manufacturer />
+            {/* <Shopkeeper /> */}
           </div>
         ) : (
           <div className="container">
