@@ -5,7 +5,7 @@ import Manufacturer from "./Manufacturer";
 class Login extends Component {
   constructor(props) {
     super(props);
-    this.state = {npm i react-qr-code
+    this.state = {
       ID: "",
       password: "",
       isLog: false,
