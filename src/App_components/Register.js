@@ -5,23 +5,23 @@ import "./Login.css";
 const Register = (props) => {
   let history = useNavigate();
   const [data, setData] = useState({
-    mod: "",
-    ID: "",
-    email: "",
-    password: "",
+    module: "",
+    Userid: "",
+    Email: "",
+    Password: "",
   });
 
-  const handlechange = (e) => {
+  const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
     console.log(data);
   };
   const fun = (e) => {
     e.preventDefault();
     const sendData = {
-      mod: data.mod,
-      ID: data.ID,
-      email: data.email,
-      password: data.password,
+      module: data.module,
+      Userid: data.Userid,
+      Email: data.Email,
+      Password: data.Password,
     };
     console.log(sendData);
     axios
@@ -46,9 +46,9 @@ const Register = (props) => {
               <select
                 className="select-box"
                 placeholder="Select"
-                name="mod"
-                onChange={handlechange}
-                value={data.mod}
+                name="module"
+                onChange={handleChange}
+                value={data.module}
               >
                 <option value="">Select</option>
                 <option value="Manufacturer">Manufacturer</option>
@@ -56,32 +56,32 @@ const Register = (props) => {
               </select>
               <input
                 type="text"
-                name="ID"
+                name="Userid"
                 id="ID"
                 className="input-box"
                 placeholder="Enter UserID"
-                onChange={handlechange}
-                value={data.ID}
+                onChange={handleChange}
+                value={data.Userid}
                 required
               />
               <input
                 type="email"
-                name="email"
+                name="Email"
                 id="email"
                 className="input-box"
                 placeholder="E-Mail"
-                onChange={handlechange}
-                value={data.email}
+                onChange={handleChange}
+                value={data.Email}
                 required
               />
               <input
                 type="password"
-                name="password"
+                name="Password"
                 id="password"
                 className="input-box"
                 placeholder="Password"
-                onChange={handlechange}
-                value={data.password}
+                onChange={handleChange}
+                value={data.Password}
                 required
               />
 
