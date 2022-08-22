@@ -1,35 +1,38 @@
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
 import "./Login.css";
 const Login = () => {
-  // let navigate = useNavigate();
+  let navigate = useNavigate();
 
-  // const [user, setUser] = useState({
-  //   module: "",
-  //   Userid: "",
-  //   Password: "",
-  // });
-  // const handleChange = (e) => {
-  //   setUser({ ...user, [e.target.name]: e.target.value });
-  // };
-  // const fun = (e) => {
-  //   e.preventDefault();
-  //   const sendData = {
-  //     module: data.module,
-  //     Userid: data.Userid,
-  //     Password: data.Password,
-  //   };
-  //   console.log(sendData);
-  //   axios
-  //     .post("https://localhost/project/login.php", sendData)
-  //     .then((result) => {
-  //       if (result.data.Status === "Invalid") {
-  //         alert("Invalid User");
-  //       } else {
-  //         history("/login");
-  //       }
-  //     });
-  // };
+  const [user, setUser] = useState({
+    module: "",
+    Userid: "",
+    Password: "",
+  });
+  const handleChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+    console.log(user);
+  };
+  const fun = (e) => {
+    e.preventDefault();
+    const sendData = {
+      module: user.module,
+      Userid: user.Userid,
+      Password: user.Password,
+    };
+    console.log(sendData);
+    axios
+      .post("https://localhost/project/login.php", sendData)
+      .then((result) => {
+        if (result.data.Status === "200") {
+          navigate("/");
+        } else {
+          alert("Invalid User");
+        }
+      });
+  };
   return (
     <div className="container">
       <div className="left">
@@ -38,12 +41,11 @@ const Login = () => {
             <h2>
               <u>LOGIN</u>
             </h2>
-            <form>
+            <form onSubmit={fun}>
               <select
                 className="select-box"
-                placeholder="Select"
-                // onChange={handleChange}
-                // value={user.module}
+                onChange={handleChange}
+                value={user.module}
               >
                 <option value="">Select</option>
                 <option value="Manufacturer">Manufacturer</option>
@@ -53,8 +55,8 @@ const Login = () => {
                 type="text"
                 name="Userid"
                 id="ID"
-                // onChange={handleChange}
-                // value={user.Userid}
+                onChange={handleChange}
+                value={user.Userid}
                 className="input-box"
                 placeholder="Enter UserID"
                 required
@@ -63,8 +65,8 @@ const Login = () => {
                 type="password"
                 name="Password"
                 id="password"
-                // onChange={handleChange}
-                // value={user.Password}
+                onChange={handleChange}
+                value={user.Password}
                 className="input-box"
                 placeholder="Password"
                 required
