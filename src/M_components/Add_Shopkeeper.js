@@ -16,7 +16,7 @@ export const Add_Shopkeeper = () => {
     console.log(data);
   };
   const fun = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     const sendData = {
       shopid: data.shopid,
       shopname: data.shopname,

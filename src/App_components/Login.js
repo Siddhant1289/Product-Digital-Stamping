@@ -1,97 +1,121 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { Component } from "react";
 import axios from "axios";
-// import Manufacturer from "./Manufacturer";
-
 import "./Login.css";
-const Login = () => {
-  let navigate = useNavigate();
-
-  const [user, setUser] = useState({
-    module: "",
-    Userid: "",
-    Password: "",
-    isLog: false,
-  });
-  const handleChange = (e) => {
-    setUser({ ...user, [e.target.name]: e.target.value });
-    console.log(user);
-  };
-  const fun = (e) => {
-    e.preventDefault();
-    const sendData = {
-      module: user.module,
-      Userid: user.Userid,
-      Password: user.Password,
+// import Manufacturer from "/.Manufacturer";
+import Home from "./Home";
+class Login extends Component {
+  constructor() {
+    super();
+    this.state = {
+      // module: "",
+      Userid: "",
+      Password: "",
+      isLoggedIn: false,
     };
+    this.handleChange = this.handleChange.bind(this);
+  }
 
-    console.log(sendData);
+  handleLogin = () => {
+    // const module = this.state.module;
+    const Userid = this.state.Userid;
+    const Password = this.state.Password;
+
+    const data = {
+      module,
+      Userid,
+      Password,
+    };
     axios
-      .get("https://localhost/project/login.php", sendData)
-      .then((result) => {
-        if (result.data.Status === "valid") {
-          navigate("/");
+      .get("http://localhost/project/login.php", { params: data })
+      .then((kalu) => {
+        console.log(kalu);
+        console.log(kalu.data[0].answer);
+
+        if (kalu.data[0].answer === "valid") {
+          this.setState({
+            isLoggedIn: true,
+          });
         } else {
-          alert("Invalid User");
+          alert("not Valid");
         }
+      })
+      .catch((err) => {
+        alert(err);
       });
   };
-  return (
-    <div>
-      {user.isLog ? (
-        <div>{/* <Manufacturer /> */}</div>
-      ) : (
-        <div className="container">
-          <div className="left">
-            <div className="card">
-              <div className="card-front">
-                <h2>
-                  <u>LOGIN</u>
-                </h2>
-                <form onSubmit={fun}>
-                  <select
-                    name="module"
-                    className="select-box"
-                    onChange={handleChange}
-                    value={user.module}
-                  >
-                    <option value="">Select</option>
-                    <option value="Manufacturer">Manufacturer</option>
-                    <option value="Shopkeeper">Shopkeeper</option>
-                  </select>
-                  <input
-                    type="text"
-                    name="Userid"
-                    id="ID"
-                    onChange={handleChange}
-                    value={user.Userid}
-                    className="input-box"
-                    placeholder="Enter UserID"
-                    required
-                  />
-                  <input
-                    type="password"
-                    name="Password"
-                    id="password"
-                    onChange={handleChange}
-                    value={user.Password}
-                    className="input-box"
-                    placeholder="Password"
-                    required
-                  />
 
-                  <input className="submit-btn" type="submit" value="submit" />
-                  <input type="checkbox" />
-                  <span>Remember Me</span>
-                </form>
+  handleChange = (e1) => {
+    this.setState({
+      ...this.state,
+      [e1.target.name]: e1.target.value,
+    });
+    console.log(this.state, "formField");
+  };
+  render() {
+    return (
+      <div>
+        {this.state.isLoggedIn ? (
+          <div>
+            <Home />
+          </div>
+        ) : (
+          <div className="container">
+            <div className="left">
+              <div className="card">
+                <div className="card-front">
+                  <h2>
+                    <u>LOGIN</u>
+                  </h2>
+                  <form>
+                    {/* <select
+                      name="module"
+                      className="select-box"
+                      onChange={this.handleChange}
+                      value={this.state.module}
+                    >
+                      <option value="">Select</option>
+                      <option value="Manufacturer">Manufacturer</option>
+                      <option value="Shopkeeper">Shopkeeper</option>
+                    </select> */}
+                    <input
+                      type="text"
+                      name="Userid"
+                      id="Userid"
+                      onChange={this.handleChange}
+                      value={this.state.Userid}
+                      className="input-box"
+                      placeholder="Enter UserID"
+                      required
+                    />
+                    <input
+                      type="password"
+                      name="Password"
+                      id="Password"
+                      onChange={this.handleChange}
+                      value={this.state.Password}
+                      className="input-box"
+                      placeholder="Password"
+                      required
+                    />
 
-                <a href="">Forgot Password?</a>
+                    <input
+                      className="submit-btn"
+                      type="submit"
+                      onClick={this.sendData}
+                      value="submit"
+                    />
+                    {/* <input type="checkbox" /> */}
+                    {/* <span>Remember Me</span> */}
+                  </form>
+
+                  <a href="">Forgot Password?</a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      )}
-    </div>
-  );
-};
+        )}
+      </div>
+    );
+  }
+}
 export default Login;
