@@ -67,7 +67,7 @@ class Login extends Component {
                     <u>LOGIN</u>
                   </h2>
                   <form>
-                    {/* <select
+                    <select
                       name="module"
                       className="select-box"
                       onChange={this.handleChange}
@@ -76,7 +76,7 @@ class Login extends Component {
                       <option value="">Select</option>
                       <option value="Manufacturer">Manufacturer</option>
                       <option value="Shopkeeper">Shopkeeper</option>
-                    </select> */}
+                    </select>
                     <input
                       type="text"
                       name="Userid"

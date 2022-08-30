@@ -1,10 +1,8 @@
 import React from "react";
 import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./Login.css";
 const Register = (props) => {
-  let history = useNavigate();
   const [data, setData] = useState({
     module: "",
     Userid: "",
@@ -26,12 +24,12 @@ const Register = (props) => {
     };
     console.log(sendData);
     axios
-      .post("https://localhost/project/login_data_insert.php", sendData)
+      .post("http://localhost/project/login_data_insert.php", sendData)
       .then((result) => {
         if (result.data.Status === "Invalid") {
           alert("Invalid User");
         } else {
-          history("/login");
+          alert("Registered");
         }
       });
   };
@@ -88,6 +86,7 @@ const Register = (props) => {
 
               <input className="submit-btn" type="submit" value="submit" />
             </form>
+            <button className="signin">SignIn?</button>
           </div>
         </div>
       </div>

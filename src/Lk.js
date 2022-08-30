@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Manufacturer from "./Manufacturer";
 import Shopkeeper from "./Shopkeeper";
+import "./App_components/Login.css";
 
 class Lk extends Component {
   constructor() {
@@ -64,32 +65,52 @@ class Lk extends Component {
             )}
           </div>
         ) : (
-          <div>
-            <select
-              name="module"
-              className="select-box"
-              onChange={this.handleChangeFields}
-            >
-              <option value="">Select</option>
-              <option value="Manufacturer">Manufacturer</option>
-              <option value="Shopkeeper">Shopkeeper</option>
-            </select>
-            <input
-              type="text"
-              id="email"
-              label="Email Address"
-              name="email"
-              onChange={this.handleChangeFields}
-            />
-            <input
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              onChange={this.handleChangeFields}
-            />
+          <div className="container">
+            <div className="left">
+              <div className="card">
+                <div className="card-front">
+                  <h2>
+                    <u>LOGIN</u>
+                  </h2>
+                  <div>
+                    <select
+                      name="module"
+                      className="input-box"
+                      onChange={this.handleChangeFields}
+                    >
+                      <option value="">Select</option>
+                      <option value="Manufacturer">Manufacturer</option>
+                      <option value="Shopkeeper">Shopkeeper</option>
+                    </select>
+                    <input
+                      type="text"
+                      id="email"
+                      label="Email Address"
+                      name="email"
+                      className="input-box"
+                      placeholder="Enter UserID"
+                      onChange={this.handleChangeFields}
+                    />
+                    <input
+                      name="password"
+                      label="Password"
+                      type="password"
+                      id="password"
+                      className="input-box"
+                      placeholder="Password"
+                      onChange={this.handleChangeFields}
+                    />
 
-            <input type="button" value="submit" onClick={this.handleLogin} />
+                    <input
+                      type="button"
+                      value="submit"
+                      className="submit-btn"
+                      onClick={this.handleLogin}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </div>
