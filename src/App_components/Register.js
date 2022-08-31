@@ -118,7 +118,7 @@ class Register extends Component {
                       <input
                         className="submit-btn"
                         type="submit"
-                        value="submit"
+                        value="Submit"
                       />
                     </form>
                     <button className="signin" onClick={this.handleClick}>
