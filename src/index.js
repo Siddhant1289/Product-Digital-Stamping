@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-// import App from "./App";
-import Lk from "./Lk";
+import App from "./App";
+// import Lk from "./Lk";
 import reportWebVitals from "./reportWebVitals";
 // import Customer from "./Customer";
 // import Manufacturer from "./Manufacturer";
@@ -11,8 +11,8 @@ import reportWebVitals from "./reportWebVitals";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Lk />
+    <App />
+    {/* <Lk /> */}
     {/* <Customer /> */}
     {/* <Manufacturer /> */}
     {/* <Shopkeeper /> */}
