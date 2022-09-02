@@ -4,7 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from "./M_components/Navbar";
 import { Add_Shopkeeper } from "./M_components/Add_Shopkeeper";
 import { Products } from "./M_components/Products";
-import { Generate_QR } from "./M_components/Generate_QR";
+import Generate_QR from "./M_components/Generate_QR";
+// import { Generate_QR } from "./M_components/Generate_QR";
 class Manufacturer extends Component {
   render() {
     return (
