@@ -1,5 +1,6 @@
 import axios from "axios";
 import { Component } from "react";
+import QRCode from "react-qr-code";
 
 class Generate_QR extends Component {
   constructor(props) {
@@ -7,11 +8,14 @@ class Generate_QR extends Component {
     this.state = {
       shopid: "",
       model: "",
-      result: [],
+      result: "",
+      // test: "",
     };
+    console.log(this.state.result, "Lawde");
     this.handleChangeFields = this.handleChangeFields.bind(this);
   }
-  handleLogin = () => {
+
+  handleLogin = (e) => {
     const shopid = this.state.shopid;
     const model = this.state.model;
 
@@ -25,11 +29,11 @@ class Generate_QR extends Component {
         console.log(kalu);
         console.log(kalu.data[0]);
         this.setState({
-          result: kalu.data[0],
+          result: JSON.stringify(kalu.data[0]),
         });
+
         console.log(this.state.result, "Kalu");
       });
-    console.log(this.state);
   };
 
   handleChangeFields = (e1) => {
@@ -39,6 +43,7 @@ class Generate_QR extends Component {
     });
     console.log(this.state, "formField");
   };
+
   render() {
     return (
       <div className="container">
@@ -73,6 +78,18 @@ class Generate_QR extends Component {
                   className="submit-btn"
                   onClick={this.handleLogin}
                 />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <br></br>
+        </div>
+        <div className="main">
+          <div className="card">
+            <div className="inner-box">
+              <div>
+                <QRCode value={this.state.result} />
               </div>
             </div>
           </div>
