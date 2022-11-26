@@ -11,7 +11,7 @@ class Generate_QR extends Component {
       result: "",
       // test: "",
     };
-    console.log(this.state.result, "Lawde");
+
     this.handleChangeFields = this.handleChangeFields.bind(this);
   }
 
