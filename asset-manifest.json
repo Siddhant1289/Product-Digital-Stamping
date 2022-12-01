@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Product-Digital-Stamping/static/css/main.bc65577d.css",
+    "main.js": "/Product-Digital-Stamping/static/js/main.df9a43a4.js",
+    "static/js/787.8df0c86b.chunk.js": "/Product-Digital-Stamping/static/js/787.8df0c86b.chunk.js",
+    "index.html": "/Product-Digital-Stamping/index.html",
+    "main.bc65577d.css.map": "/Product-Digital-Stamping/static/css/main.bc65577d.css.map",
+    "main.df9a43a4.js.map": "/Product-Digital-Stamping/static/js/main.df9a43a4.js.map",
+    "787.8df0c86b.chunk.js.map": "/Product-Digital-Stamping/static/js/787.8df0c86b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc65577d.css",
+    "static/js/main.df9a43a4.js"
+  ]
+}
